@@ -83,7 +83,8 @@ body, a, span, b, h1,h2,h3,h4,h5,h6, p, div, button {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
-    filter: blur(2px);
+    /* filter: blur(2px); */
+    display: none;
     background: #fff;
     border-radius: 50%;
 }

@@ -1,10 +1,10 @@
 @extends('layouts.mainlayout')
 
 @section('maincontent')
-    <div class="row">
+<div class="container p-4 position-relative border-radius" style="max-width: 1000px;">
         <div class="col-md-12">
             <!-- Profile Image -->
-            <div class="card card-primary">
+            <div class="card card-primary border-radius box-shadow p-3">
                 <div class="card-body box-profile">
                     <div class="text-center">
                         <img class="profile-user-img img-fluid img-circle" src="{{ asset('img/logo_rita.jpeg') }}"
@@ -31,7 +31,7 @@
                             <b>Email</b> <a class="float-right">{{ Auth::User()->email }}</a>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-primary btn-block" data-toggle="modal"
+                    <a href="#" class="btn btn-secondary btn-block" data-toggle="modal"
                         data-target="#viewventemodal"><b>Changer le mot de passe</b></a>
                     <div class="modal fade bd-example-modal-lg" id="viewventemodal" role="dialog">
                         <div class="modal-dialog modal-lg modal-content">
@@ -39,13 +39,13 @@
                                 <h5 class="modal-title" id="exampleModalLabel">Changer le mot de passe</h5>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body p-4">
                                 <div class="row mb-2">
                                     <input type="password" name="password" class="form-control" required>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <a class="btn btn-dark" href="">Modifier</a>
+                            <div class="modal-footer px-4">
+                                <a class="btn btn-secondary w-100" href="">Modifier</a>
                             </div>
                             </form>
                         </div>
