@@ -3,8 +3,8 @@
 @section('maincontent')
     <div class="row">
         <div class="col-12">
-            <div class="card shadow">
-                <div class="card-body table-responsive p-3" style="height: 300px;">
+            <div class="card box-shadow border-radius p-2">
+                <div class="card-body table-responsive p-3" style="min-height: 300px;">
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -26,7 +26,7 @@
                                     <td>{{$enquette->type_violence_violation}}</td>
                                     <td>{{$enquette->nature_violence}}</td>
                                     <td>{{$enquette->identite_genre}}</td>
-                                    <td><a href="{{ route ('gestion_enquete.show', [$enquette->id]) }}"><i class="fa fa-edit text-info" aria-hidden="true"></i></a></td>
+                                    <td><a href="{{ route ('gestion_enquete.show', [$enquette->id]) }}"><i class="fa fa-edit text-secondary" aria-hidden="true"></i></a></td>
                                 </tr>
                             @endforeach
                         </tbody>

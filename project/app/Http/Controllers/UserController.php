@@ -17,7 +17,8 @@ class UserController extends Controller
     public function index()
     {
         if(!isset(Auth::User()->id)) {
-            return redirect()->route('auth');
+            header('Location: /auth'); die();
+            // header('Location: /auth'); die();
         }
 
         return view('users.list', [
@@ -33,7 +34,8 @@ class UserController extends Controller
     public function create()
     {
         if(!isset(Auth::User()->id)) {
-            return redirect()->route('auth');
+            // return redirect()->route('index');
+            header('Location: /auth'); die();
         }
 
         return view('users.form');
@@ -48,7 +50,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         if(!isset(Auth::User()->id)) {
-            return redirect()->route('auth');
+            header('Location: /auth'); die();
         }
 
         User::create([
@@ -71,7 +73,7 @@ class UserController extends Controller
     public function show($id)
     {
         if(!isset(Auth::User()->id)) {
-            return redirect()->route('auth');
+            header('Location: /auth'); die();
         }
 
         return view('enquettes.etat', [
@@ -112,7 +114,7 @@ class UserController extends Controller
     public function profile()
     {
         if(!isset(Auth::User()->id)) {
-            return redirect()->route('auth');
+            header('Location: /auth'); die();
         }
 
         return view('users.profile2');
@@ -128,7 +130,7 @@ class UserController extends Controller
     public function profileadmin()
     {
         if(!isset(Auth::User()->id)) {
-            return redirect()->route('auth');
+            header('Location: /auth'); die();
         }
 
         return view('users.profile');
@@ -143,7 +145,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         if(!isset(Auth::User()->id)) {
-            return redirect()->route('auth');
+            header('Location: /auth'); die();
         }
         
         $dem = User::find($id);

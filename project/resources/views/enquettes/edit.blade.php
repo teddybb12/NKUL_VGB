@@ -5,13 +5,13 @@
         <h4>Documentation & suivi du cas:</h4>
         <p>RITA {{ date('Y') }}/{{ $finds->pays }}/{{ $finds->user->association }}/00{{ $finds->id }}</p>
     </div>
-    <div class="row">
-        <div class="col-md-6">
+    <div class="container bg-white p-4 position-relative border-radius" style="max-width: 1000px;">
+        <div class="col-md-12">
             <form action="{{route ('gestion_enquete.update', [$finds->id])}}}" method="POST" enctype="multipart/form-data">
                 @method('PATCH')
                 @csrf
-                <h4>Documentation</h4>
-                <div class="card">
+                <h4 class="px-4 text-warning bold-800">Documentation</h4>
+                <div class="card border-radius border-0 box-shadow p-3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
@@ -54,13 +54,13 @@
             </form>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-12">
 
             <form action="{{route ('gestion_enquete.update', [$finds->id])}}}" method="POST" enctype="multipart/form-data">
                 @method('PATCH')
                 @csrf
-                <h4>Suivi</h4>
-                <div class="card">
+                <h4 class="px-4 pt-4 text-warning bold-800">Suivi</h4>
+                <div class="card border-radius border-0 box-shadow p-3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
