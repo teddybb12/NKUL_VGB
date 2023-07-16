@@ -17,18 +17,26 @@ class InfoController extends Controller
      */
     public function index()
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('enquettes.list', [
             'enquettes' => informations::all()
         ]);
     }
 
-        /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function list_enquette()
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('enquettes.list2', [
             'enquettes' => informations::where('user_id', '=', Auth::user()->id)->get()
         ]);
@@ -41,10 +49,14 @@ class InfoController extends Controller
      */
     public function create()
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('enquettes.form');
     }
 
-        /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -64,12 +76,20 @@ class InfoController extends Controller
      */
     public function store(Request $request)
     {
-        informations::create($request->all());
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
 
-        return redirect()->route('gestion_enquete.create');
+        try {
+            informations::create($request->all());
+
+            return redirect()->route('gestion_enquete.create');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
-    
-     /**
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -77,6 +97,10 @@ class InfoController extends Controller
      */
     public function store2(Request $request)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         informations::create($request->all());
 
         return redirect()->route('form_enquette');
@@ -90,6 +114,10 @@ class InfoController extends Controller
      */
     public function show($id)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('enquettes.edit', [
             'finds' => informations::find($id),
         ]);
@@ -103,6 +131,10 @@ class InfoController extends Controller
      */
     public function edit($id)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('back-end.pages.article.edit', [
             'finds' => informations::find($id),
         ]);
@@ -117,6 +149,10 @@ class InfoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         $info = informations::find($id);
         $info->update($request->all());
 
@@ -131,6 +167,10 @@ class InfoController extends Controller
      */
     public function destroy($id)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         $dem = informations::find($id);
         $dem->delete();
 
@@ -139,6 +179,10 @@ class InfoController extends Controller
 
     public function print($id)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('enquettes.etat', [
             'finds' => informations::find($id),
         ]);
@@ -146,11 +190,15 @@ class InfoController extends Controller
 
     public function print2($id)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('enquettes.etat2', [
             'finds' => informations::find($id),
         ]);
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -158,6 +206,10 @@ class InfoController extends Controller
      */
     public function export_data()
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+        
         return Excel::download(new UsersExport, 'data.xlsx');
     }
 }

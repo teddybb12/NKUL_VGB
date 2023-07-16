@@ -29,6 +29,8 @@ Route::get('/home_enquetteur', [PageController::class, 'home2'])->name('home2');
 
 Route::post('auth', [AuthController::class, 'login'])->name('login');
 
+Route::get('auth', [AuthController::class, 'login'])->name('login');
+
 Route::post('deconnexion', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('gestion_enquete', InfoController::class);

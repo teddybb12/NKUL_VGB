@@ -18,7 +18,9 @@ class CreateInformationsTable extends Migration
             $table->unsignedBigInteger('users_id')->unsigned();
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             
-            $table->String('date_couverture')->nullable();
+            $table->string('date_couverture')->nullable();
+            $table->string('code_unique')->nullable();
+            $table->string('ancien')->nullable();
             $table->string('orientation_sexuel')->nullable();
             $table->string('type_violence_violation')->nullable();
             $table->string('nature_violence')->nullable();

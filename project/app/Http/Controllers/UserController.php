@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -15,6 +16,10 @@ class UserController extends Controller
      */
     public function index()
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('users.list', [
             'users' => User::all()
         ]);
@@ -27,6 +32,10 @@ class UserController extends Controller
      */
     public function create()
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('users.form');
     }
 
@@ -38,6 +47,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         User::create([
             'nom'=>$request->nom,
             'prenom'=>$request->prenom,
@@ -57,6 +70,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('enquettes.etat', [
             'finds' => User::find($id),
         ]);
@@ -94,6 +111,10 @@ class UserController extends Controller
      */
     public function profile()
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('users.profile2');
     }
 
@@ -106,6 +127,10 @@ class UserController extends Controller
      */
     public function profileadmin()
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+
         return view('users.profile');
     }
 
@@ -117,6 +142,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+        if(!isset(Auth::User()->id)) {
+            return redirect()->route('auth');
+        }
+        
         $dem = User::find($id);
         $dem->delete();
 

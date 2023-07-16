@@ -2,9 +2,10 @@
 
 @section('maincontent')
     <!-- SELECT2 EXAMPLE -->
-    <form action="{{route('gestion_users.store')}}" method="POST" enctype="multipart/form-data">
+    <div class="container p-4 position-relative border-radius" style="max-width: 1000px;">
+    <form action="{{route('gestion_users.store')}}" class="" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="card shadow">
+        <div class="card shadow p-3 border-radius">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-4">
@@ -73,5 +74,6 @@
             </div>
         </div>
     </form>
+    </div>
     <!-- /.card -->
 @endsection

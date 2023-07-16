@@ -1,11 +1,11 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-dark" style="background: rgb(207, 123, 123);">
+<nav class="main-header navbar navbar-expand navbar-white navbar-dark">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item" style="color: #002a54;font-weight:bold">
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars text-dark"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <h1 class="nav-link text-dark" style="color: #002a54; font-weight:bold">Bienvenue dans NKUL VGB</h1>
+            <!-- <h1 class="nav-link text-dark" style="color: #002a54; font-weight:bold">Bienvenue dans NKUL VGB</h1> -->
         </li>
     </ul>
     <!-- Right navbar links -->
@@ -14,7 +14,7 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                 @csrf
                 <button type="submit" class="nav-link text-dark btn" style="color: #002a54;font-weight:bold">
-                    <i class="fa fa-sign-out-alt text-dark"></i> Deconnexion
+                    <i class="fa fa-power-off text-dark"></i> Deconnexion
                 </button>
             </form>
         </li>

@@ -2,7 +2,7 @@
 
 @section('maincontent')
 
-    <div class="container">
+<div class="container bg-white box-shadow p-4 position-relative border-radius" style="max-width: 1000px;">
         <h5 class="text-center mb-3">FICHE DE SUIVI</h5>
         <div class="d-flex justify-content-center" style="font-style: italic">
             <h6>Code référence :</h6>

@@ -6,6 +6,7 @@ use App\Models\informations;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -16,6 +17,10 @@ class PageController extends Controller
      */
     public function accueil()
     {
+        if(isset(Auth::User()->id)) {
+            return redirect()->route('home');
+        }
+
         return view('login');
     }
 

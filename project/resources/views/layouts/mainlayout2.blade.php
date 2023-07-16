@@ -38,9 +38,9 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar main-sidebar-custom sidebar-light-dark elevation-4">
             <!-- Brand Logo -->
-            <a href="#" class="brand-link">
-                <img src="{{asset('img/logo_rita.jpeg')}}" alt="Mokutech Logo" class="brand-image elevation-3">
-                <span class="brand-text font-weight-light">Nkul VGB</span>
+            <a href="/home" class="brand-link">
+                <img src="{{asset('img/logo_rita.jpeg')}}" alt="Logo" class="brand-image elevation-3">
+                <span class="brand-text font-weight-light bold-800">Nkul VGB</span>
             </a>
 
             @include('layouts.sidebar2')
@@ -58,7 +58,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">{{$title ?? ''}}</h1>
+                            <!-- <h1 class="m-0">{{$title ?? ''}}</h1> -->
                         </div><!-- /.col -->
 
                     </div><!-- /.row -->

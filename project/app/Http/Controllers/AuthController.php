@@ -9,6 +9,11 @@ class AuthController extends Controller
 {
     function login(Request $request)
     {
+
+        if(isset(Auth::User()->id)) {
+            return redirect()->route('home');
+        }
+
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             if (Auth::user()->role_id == 1){
                 return redirect()->route('home');

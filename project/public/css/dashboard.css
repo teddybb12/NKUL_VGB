@@ -1,0 +1,181 @@
+@import url('https://fonts.cdnfonts.com/css/space-grotesk');
+                
+body, a, span, b, h1,h2,h3,h4,h5,h6, p, div, button {
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.border-radius {
+    border-radius: 50%;
+}
+
+.brand-link {
+    text-decoration: none;
+}
+
+.brand-link span {
+    font-weight: 800 !important;
+}
+
+.main-sidebar, .main-header {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.user-panel {
+    border-bottom: 0px !important;
+    background: #f5f5f5;
+    border-radius: 25px;
+    height: 50px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px !important;
+}
+.user-panel a{
+    text-decoration: none;
+}
+.user-panel .info {
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+.user-panel .user-data {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    display: flex;
+    padding-left: 5px;
+}
+
+.user-panel .fa {
+    font-size: 15px;
+    width: 30px;
+}
+
+.user-panel .info {
+    font-size: 14px;
+}
+
+.nav-item .fa {
+    width: 35px;
+}
+
+.nav-link .far {
+    width: 35px;
+}
+
+.nav-item {
+    margin-top: 10px;
+}
+
+[class*=sidebar-light-] .nav-sidebar>.nav-item.menu-open>.nav-link, [class*=sidebar-light-] .nav-sidebar>.nav-item:hover>.nav-link {
+    background-color: rgb(240, 211, 156);
+    color: #212529;
+}
+
+.nav-link:hover {
+    color: rgb(197, 142, 74) !important;
+}
+
+.sidebar .logo-2 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    filter: blur(2px);
+    background: #fff;
+    border-radius: 50%;
+}
+
+.sidebar nav {
+    background: #fff !important;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    color: #212529 !important;
+    background: #fff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.box-shadow {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.border-radius {
+    border-radius: 20px;
+}
+
+.content-wrapper-bg {
+    background:  url(https://cdn1.vectorstock.com/i/1000x1000/18/75/abstract-colorful-circles-background-vector-14301875.jpg)top/cover;
+    filter: blur(5px);
+    position: fixed;
+    top: 0;
+    bottom: -1000px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.content-wrapper {
+    padding-bottom: 80px;
+}
+
+.content-wrapper {
+    background: transparent;
+    z-index: 99999;
+    position: fixed;
+    top: 55px;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+}
+
+.small-box.bg-secondary {
+    background-color: #fff !important;
+}
+
+.small-box.bg-secondary h3, .small-box.bg-secondary h5 {
+    color: #212529;
+}
+
+.bold-800 {
+    font-weight: 800;
+}
+
+.small-box{
+    border-left: 6px solid #e89519 !important;
+}
+
+.small-box .fa {
+    color: rgb(233, 180, 115);
+    font-size: 40px !important;
+}
+
+.small-box.bg-secondary h5 {
+    color: rgb(207, 127, 30);
+}
+
+.small-box-footer {
+    /* color: rgba(226, 148, 53, 0.926) !important; */
+    display: none !important;
+}
+
+.text-warning {
+    color: rgba(226, 148, 53, 0.926) !important;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(182, 114, 30);
+}
+
+.t-12 {
+    font-size: 12px;
+}
