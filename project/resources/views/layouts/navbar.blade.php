@@ -13,8 +13,8 @@
         <li class="nav-item">
             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit" class="nav-link text-dark btn" style="color: #002a54;font-weight:bold">
-                    <i class="fa fa-power-off text-dark"></i> Deconnexion
+                <button type="submit" class="nav-link btn-danger text-white btn" style="color: #002a54;font-weight:bold">
+                    <i class="fa fa-power-off text-white"></i> Deconnexion
                 </button>
             </form>
         </li>

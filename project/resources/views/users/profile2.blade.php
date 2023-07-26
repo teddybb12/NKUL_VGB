@@ -1,7 +1,7 @@
 @extends('layouts.mainlayout2')
 
 @section('maincontent')
-    <div class="row">
+<div class="container p-4 position-relative border-radius" style="max-width: 1000px;">
         <div class="col-md-12">
             <!-- Profile Image -->
             <div class="card card-primary">

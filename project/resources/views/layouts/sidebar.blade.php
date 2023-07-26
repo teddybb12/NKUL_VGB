@@ -9,7 +9,8 @@
             </div>
             <div class="info float-left">
                 <a href="{{ route('profile_admin') }}" class="d-block" style="font-weight:bold">{{ Auth::User()->nom }}
-                    {{ Auth::User()->prenom }}</a>
+                    <!-- {{ Auth::User()->prenom }} -->
+                </a>
             </div>
         </div>
     </div>
